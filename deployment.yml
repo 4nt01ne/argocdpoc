@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: camel-deployment
+  labels:
+    app: camel
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: camel
+  template:
+    metadata:
+      labels:
+        app: camel
+    spec:
+      containers:
+      - name: camel
+        image: camel-image:v1.0.0
