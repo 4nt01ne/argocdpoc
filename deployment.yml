@@ -16,4 +16,5 @@ spec:
     spec:
       containers:
       - name: camel
-        image: camel-image:v1.0.0
+        image: camel-image:v1.0.1
+        imagePullPolicy: Never
